@@ -252,6 +252,7 @@ INSERT INTO `productgroup` (`gid`, `gname`) VALUES
 (58, 'Quần'),
 (59, 'Váy');
 
+INSERT INTO `account` (`aid`, `apassword`, `astatus`, `aemail`, `aphone`, `adateofbirth`) VALUES ('admin', 'admin', '1', 'quangnguyen6295@gmail.com', '01635220904', '1995-07-08')
 --
 -- Indexes for dumped tables
 --
