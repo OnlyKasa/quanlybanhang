@@ -1,5 +1,5 @@
 <div class="navbar-header">
-    <a class="navbar-brand " href="index.php"><i class="glyphicon glyphicon-home"></i> Trang chủ</a>
+    <a class="navbar-brand" href="index.php"><i class="glyphicon glyphicon-home"></i> Trang chủ</a>
 </div>
 <ul class="nav navbar-right top-nav">
     <li class="dropdown">

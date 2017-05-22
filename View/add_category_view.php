@@ -17,7 +17,7 @@ while($row=mysqli_fetch_assoc($query)) {
                 </i>Thêm danh mục
             </li>
         </ol>
-        <form role="form" method="post" action="Module/xulyaddcategory.php">
+        <form role="form" method="post" action="Controls/ctl_add_category.php">
 
             <div class="form-group">
                 <label>Thêm danh mục</label>

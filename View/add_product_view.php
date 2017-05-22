@@ -1,5 +1,5 @@
 <?php
-include 'Models/connectDB.php';
+include_once 'Models/connectDB.php';
 $sql="select * from category";
 $query=mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($query)) {
@@ -15,7 +15,7 @@ while($row=mysqli_fetch_assoc($query)) {
                Thêm sản phẩm
             </li>
         </ol>
-        <form role="form" method="post" action="Module/xulyaddproduct.php">
+        <form role="form" method="post" action="Controls/ctl_add_product.php">
 
             <div class="form-group">
                 <label>Tên sản phẩm</label>
@@ -41,6 +41,3 @@ while($row=mysqli_fetch_assoc($query)) {
             <button type="reset" class="btn btn-default">Nhập lại</button>
         </form>
     </div>
-</div>
-</body>
-</html>

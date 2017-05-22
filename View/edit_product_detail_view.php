@@ -1,11 +1,10 @@
 <?php
-
-include 'Models/connectDB.php';
-$sql = "select * from productdetail WHERE did='" . $_REQUEST['did'] . "'";
-$query = mysqli_query($conn, $sql);
-$data = array();
-$r = mysqli_fetch_assoc($query);
-$data1[] = $r;
+    include_once 'Models/connectDB.php';
+    $sql = "select * from productdetail WHERE did='" . $_REQUEST['did'] . "'";
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    $r = mysqli_fetch_assoc($query);
+    $data1[] = $r;
 ?>
 
 <ol class="breadcrumb">
@@ -18,7 +17,7 @@ $data1[] = $r;
 </ol>
 <div class="row">
     <div class="col-lg-5">
-        <form role="form" method="post" action="Module/xulyeditproductdetail.php">
+        <form role="form" method="post" action="Controls/ctl_edit_product_detail.php">
             <input type="hidden" name="pid" value="<?php echo $_REQUEST['pid'] ?>">
             <input type="hidden" name="did" value="<?php echo $_REQUEST['did'] ?>">
             <div class="form-group">

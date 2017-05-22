@@ -1,12 +1,9 @@
 <?php
-
 class category
 {
     var $cid;
     var $cname;
     var $gid;
-// get set model
-//{
     public function setcid($cid)
     {
         $this->cid = $cid;
@@ -39,9 +36,11 @@ class category
 
     public function view()
     {
-        include 'connectDB.php';
-        //$sql ="select * from category";
-        $sql = "Select category.cid, category.cname, productgroup.gname from category INNER JOIN productgroup ON category.gid = productgroup.gid";
+        include_once 'connectDB.php';
+        $sql = "Select category.cid, category.cname, productgroup.gname
+                FROM category 
+                INNER JOIN productgroup 
+                ON category.gid = productgroup.gid";
         $query = mysqli_query($conn, $sql);
         $data = array();
         while ($row = mysqli_fetch_assoc($query)) {
@@ -69,25 +68,24 @@ class category
         echo "</table>";
         echo "</div>";
     }
-//}
-// end get set
+
     public function add()
     {
-        include "connectDB.php";
+        include_once 'connectDB.php';
         $sql = "INSERT into category(cname,gid) values ('" . $this->cname . "','" . $this->gid . "')";
         mysqli_query($conn, $sql);
     }
 
     public function edit()
     {
-        include 'connectDB.php';
+        include_once 'connectDB.php';
         $sql = "UPDATE category SET cname='" . $this->cname . "',gid='" . $this->gid . "' WHERE cid='" . $this->cid . "'";
         mysqli_query($conn, $sql);
     }
 
     public function del()
     {
-        include 'connectDB.php';
+        include_once 'connectDB.php';
         $sql = "DELETE from category where cid='" . $this->cid . "'";
         mysqli_query($conn, $sql);
     }

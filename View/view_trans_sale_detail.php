@@ -1,10 +1,10 @@
 <?php
-include 'Models/connectDB.php';
-$sql = "Select billdetail.bdcount, billdetail.bdunitprice, billdetail.bdmoney, productdetail.dcolor, productdetail.dsize, product.pname from billdetail, product, productdetail WHERE productdetail.did = billdetail.did and product.pid = productdetail.pid AND billdetail.bid ='" . $_REQUEST['bid'] . "'";
-$query = mysqli_query($conn, $sql);
-$data = array();
-while ($row = mysqli_fetch_assoc($query)) {
-    $data[] = $row;
+    include_once 'Models/connectDB.php';
+    $sql = "Select billdetail.bdcount, billdetail.bdunitprice, billdetail.bdmoney, productdetail.dcolor, productdetail.dsize, product.pname from billdetail, product, productdetail WHERE productdetail.did = billdetail.did and product.pid = productdetail.pid AND billdetail.bid ='" . $_REQUEST['bid'] . "'";
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    while ($row = mysqli_fetch_assoc($query)) {
+        $data[] = $row;
 }
 $sql1 = "select * from bill WHERE bill.bid='" . $_REQUEST['bid'] . "'";
 $query1 = mysqli_query($conn, $sql1);
@@ -44,9 +44,9 @@ $data1[] = $r;
     </tr>
     </table>
 
-    <td><a href='Module/xulytransbill.php?bid=<?php echo $r['bid']; ?>'><span class='glyphicon glyphicon-export'></span></a>
+    <td><a href='Controls/xulytransbill.php?bid=<?php echo $r['bid']; ?>'><span class='glyphicon glyphicon-export'></span></a>
     </td>
-    <td><a href='Module/xulydelbill.php?bid=<?php echo $r['bid']; ?>'><span
+    <td><a href='Controls/xulydelbill.php?bid=<?php echo $r['bid']; ?>'><span
                     class='glyphicon glyphicon-trash'></span></a></td>
     <td><a href='?page=viewbt'><span class='glyphicon glyphicon-arrow-left'></span></a></td>
 </div>
@@ -58,16 +58,18 @@ $data1[] = $r;
         <td>Đơn giá</td>
         <td>Số lượng</td>
         <td>Tổng tiền</td>
+    </tr>
         <?php
-        foreach ($data as $value) {
-            echo "<tr>";
-            echo "<td>" . $value['pname'] . "</td>";
-            echo "<td>" . $value['dcolor'] . "</td>";
-            echo "<td>" . $value['dsize'] . "</td>";
-            echo "<td>" . $value['bdunitprice'] . "</td>";
-            echo "<td>" . $value['bdcount'] . "</td>";
-            echo "<td>" . $value['bdmoney'] . "</td>";
-            echo "</tr>";
-        }
+            foreach ($data as $value) {
+                echo "<tr>";
+                echo "<td>" . $value['pname'] . "</td>";
+                echo "<td>" . $value['dcolor'] . "</td>";
+                echo "<td>" . $value['dsize'] . "</td>";
+                echo "<td>" . $value['bdunitprice'] . "</td>";
+                echo "<td>" . $value['bdcount'] . "</td>";
+                echo "<td>" . $value['bdmoney'] . "</td>";
+                echo "</tr>";
+            }
         ?>
+</table>
 

@@ -15,5 +15,5 @@
     $p->setpid($_REQUEST['pid']);
     $p->viewd();
 
-    ?>
+?>
 

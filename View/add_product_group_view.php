@@ -9,7 +9,7 @@
                 </i>Thêm loại sản phẩm
             </li>
         </ol>
-        <form role="form" method="post" action="Module/xulyaddproductgroup.php">
+        <form role="form" method="post" action="Controls/ctl_add_product_group.php">
 
             <div class="form-group">
                 <label>Thêm loại sản phẩm</label>

@@ -8,7 +8,7 @@
 </ol>
 <div class="row">
     <div class="col-lg-5">
-        <form role="form" method="post" action="Module/xulyaddproductdetail.php">
+        <form role="form" method="post" action="Controls/ctl_add_product_detail.php">
             <input type="hidden" name="pid" value="<?php echo $_REQUEST['pid'] ?>">
             <input type="hidden" name="pname" value="<?php echo $_REQUEST['pname'] ?>">
             <div class="form-group">

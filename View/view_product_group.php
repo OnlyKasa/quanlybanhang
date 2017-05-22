@@ -12,12 +12,6 @@
 </div>
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Then
- * Date: 3/26/2017
- * Time: 12:20 AM
- */
 include "Models/class_product_group.php";
 $pg = new productgroup();
 $pg->view();

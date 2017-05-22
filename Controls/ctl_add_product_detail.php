@@ -1,11 +1,11 @@
 
 <?php
 session_start();
-include "../Models/class_product_detail.php";
+include_once "Models/class_product_detail.php";
 if (isset($_POST['cmd'])) {
     if ($_POST['dimage'] == "" || $_POST['dsize'] == "" || $_POST['dcolor'] == "" || $_POST['dcount'] == "" || $_POST['ddate'] == "") {
         $_SESSION['error'] = "Bạn cần nhập các trường!";
-        header("location:../?page=addd&pid=".$_REQUEST['pid']."");
+        header("location:?page=addd&pid=".$_REQUEST['pid']."");
     } else {
         $_SESSION['error'] = "Thêm thành công!";
         $pd = new productdetail();
@@ -16,7 +16,7 @@ if (isset($_POST['cmd'])) {
         $pd->setdcount($_POST['dcount']);
         $pd->setddate($_POST['ddate']);
         $pd->add();;
-        header("location:../?page=viewd&pid=".$_REQUEST['pid']."");
+        header("location:?page=viewd&pid=".$_REQUEST['pid']."");
     }
 }
 ?>

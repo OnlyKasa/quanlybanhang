@@ -28,14 +28,12 @@ if (!isset($_SESSION['r'])) {
 <div id="wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <?php include 'Menu/header.php' ?>
-        <?php include 'Menu/menu.php' ?>
+        <?php include 'Menu/menu1.php' ?>
     </nav>
     <div id="page-wrapper">
         <div class="container-fluid">
-            <div class="content">
-
+            <div class="content" style="min-height: 700px">
                 <?php
-
                 if (isset($_SESSION['error'])) {
                     echo "<div class='alert alert-danger' role='alert'>" . $_SESSION['error'] . "</div>";
                     unset($_SESSION['error']);
@@ -67,7 +65,7 @@ if (!isset($_SESSION['r'])) {
                         include("View/viewbillp.php");
                         break;
                     case 'viewba':
-                        include("View/viewbillall.php");
+                        include("View/view_sale_all.php");
                         break;
                     case 'seach':
                         include('View/seach_product_view.php');
@@ -89,13 +87,13 @@ if (!isset($_SESSION['r'])) {
                         include('View/edit_product_detail_view.php');
                         break;
                     case 'viewbdt':
-                        include("View/viewbilldetailtrans.php");
+                        include("View/view_trans_sale_detail.php");
                         break;
                     case 'viewbda':
-                        include("View/viewbilldetailall.php");
+                        include("View/view_all_sale_detail.php");
                         break;
                     case 'viewbdp':
-                        include("View/viewbilldetailpay.php");
+                        include("View/view_pay_sale_detail.php");
                         break;
                     case 'viewd':
                         include("View/view_product_detail.php");
@@ -109,16 +107,14 @@ if (!isset($_SESSION['r'])) {
                     case 'viewbcu':
                         include("View/viewbillcu.php");
                         break;
+                    default : include("View/view_category.php");
                 }
-
                 ?>
             </div>
-
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    // For demo to fit into DataTables site builder...
     $('#example')
         .removeClass('display')
         .addClass('table table-striped table-bordered');

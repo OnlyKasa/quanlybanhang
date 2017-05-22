@@ -59,7 +59,7 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`bid`, `baddress`, `btotalmoney`, `bcustomername`, `bemail`, `bphone`, `bcreatedate`, `bdeliverydate`, `bstatus1`, `bstatus2`) VALUES
-(1, 'Hai Bà Trưng - Hà Nội', 103000, 'Duoc', 'dinhthiduoc100395@gmail.com', '0941934612', '2017-03-31', '2017-04-01', 1, 1);
+(1, 'Hai Bà Trưng - Hà Nội', 103000, 'Quang', 'Nguyễn Văn Quang', '01635220904', '2017-03-31', '2017-04-01', 1, 1);
 
 -- --------------------------------------------------------
 

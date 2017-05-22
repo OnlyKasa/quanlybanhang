@@ -1,5 +1,5 @@
 <?php
-include 'Models/connectDB.php';
+include_once 'Models/connectDB.php';
 $sql = "select * from productgroup";
 $query = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($query)) {
@@ -13,7 +13,7 @@ while ($r = mysqli_fetch_assoc($query1)) {
     $gid = $r['gid'];
 }
 if (!isset($_SESSION['r'])) {
-    $_SESSION['r'] = "Ban chua dang nhap";
+    $_SESSION['r'] = "Bạn chưa đăng nhập";
     header('location:login.php');
 }
 ?>
@@ -26,7 +26,7 @@ if (!isset($_SESSION['r'])) {
         </i>Sửa danh mục <?php echo $r['cname'] ?>
     </li>
 </ol>
-<form role="form" method="post" action="Module/xulyeditcategory.php">
+<form role="form" method="post" action="Controls/ctl_edit_category.php">
     <input type="hidden" name="cid" value="<?php echo $_REQUEST['cid']; ?>">
     <div class="form-group">
         <label>Nhập danh mục</label>
@@ -45,7 +45,7 @@ if (!isset($_SESSION['r'])) {
             ?> }
         </select>
     </div>
-    <button type="submit" name="cmd" class="btn btn-default">OK</button>
+    <button type="submit" name="cmd" class="btn btn-default">Đồng ý</button>
     <a href="?page=viewc" class="btn btn-default">Qual lại</a>
 </form>
 </div>

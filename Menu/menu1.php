@@ -23,18 +23,18 @@
                 <li><a href="?page=viewba">Tất cả đơn hàng</a></li>
             </ul>
         </li>
-        <li>
-            <a href="?page=viewcu"><i class="fa fa-fw fa-table"></i> Khách hàng</a>
-        </li>
-        <li>
-            <a href="?page=viewu"><i class="glyphicon glyphicon-comment"></i> Bình luận</a>
-        </li>
-        <li>
-            <a href="?page=viewu"><i class="glyphicon glyphicon-envelope"></i> Phản hồi</a>
-        </li>
-        <li>
-            <a href="?page=viewu"><i class="glyphicon glyphicon-user"></i> Tài khoản</a>
-        </li>
+<!--        <li>-->
+<!--            <a href="?page=viewcu"><i class="fa fa-fw fa-table"></i> Khách hàng</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="?page=#"><i class="glyphicon glyphicon-comment"></i> Bình luận</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="?page=#"><i class="glyphicon glyphicon-envelope"></i> Phản hồi</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="?page=#"><i class="glyphicon glyphicon-user"></i> Tài khoản</a>-->
+<!--        </li>-->
     </ul>
 </div>
 
